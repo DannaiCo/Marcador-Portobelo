@@ -12,7 +12,15 @@ html, body {
   padding: 0;
   background: #000;
 }
-
+video#fondo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
 .wrapper {
   width: 2114px;
   height: 630px;
@@ -24,9 +32,7 @@ html, body {
 
   body {
       margin: 0;
-    background-image: url("fondo.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+
     height: 630px;
     width: 2114px;
     font-family: sans-serif;
@@ -72,6 +78,10 @@ html, body {
   </style>
 </head>
 <body>
+  <video autoplay muted loop id="fondo">
+    <source src="fondo.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
   <div class="wrapper">
     <div class="contenedor-marcador">
       <div id="score-brasil" class="score">-</div>
@@ -101,5 +111,6 @@ html, body {
   </script>
 </body>
 </html>
+
 
 
